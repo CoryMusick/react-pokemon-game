@@ -10,7 +10,12 @@ class Pokedex extends Component {
     }) 
     
     return <div className="Pokedex">
-      {cards}
+      <div className="Pokedex-cardbox">
+       {cards} 
+      </div>
+      <div className="Pokedex-winbox">
+        {props.isWinner ? "Winning Hand" : null}
+      </div>
     </div>
   }
 }

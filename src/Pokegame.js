@@ -13,19 +13,29 @@ class Pokegame extends Component {
       }
       return hand;
     }
+
+    // Get total experience from playerhand 
+    const getTotalExp = (hand) => {
+      let total = 0;
+      hand.map(p => {
+        total += p.base_experience;
+      })
+      return total;
+    }
     const player1Hand = buildHand(props.pokemon);
     const player2Hand = buildHand(props.pokemon);
-    console.log(player1Hand);
+    const player1EXP = getTotalExp(player1Hand);
+    const player2EXP = getTotalExp(player2Hand);
 
     return (
       <div>
         <div>
-          <h2>Player 1</h2>
-          <Pokedex playerHand={player1Hand} />  
+          <h2>Player 1 - Team EXP: {player1EXP.toString()} </h2>
+          <Pokedex playerHand={player1Hand} isWinner={player1EXP > player2EXP} />
         </div>
         <div>
-          <h2>Player 2</h2>
-          <Pokedex playerHand={player2Hand} />
+          <h2>Player 2 - Team EXP: {player2EXP.toString()} </h2>
+          <Pokedex playerHand={player2Hand} isWinner={player2EXP > player1EXP}/>
         </div>
       
     </div> 
