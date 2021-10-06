@@ -1,5 +1,29 @@
 .Pokecard {
-  width: 250px;
+  width: 200px;
   height: 300px;
   background-color: lightslategray;
+}
+
+.Pokecard-electric{
+  background-color: yellow;
+}
+
+.Pokecard-bug{
+  background-color: green;
+}
+
+.Pokecard-water{
+  background-color: aqua;
+}
+
+.Pokecard-fire{
+  background-color: brown;
+}
+
+.Pokecard-flying{
+  background-color: lavenderblush;
+}
+
+.Pokecard-poison{
+  background-color: blueviolet;
 }

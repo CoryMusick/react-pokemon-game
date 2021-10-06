@@ -6,12 +6,12 @@ class Pokecard extends Component {
     const pokemon = this.props.pokemon;
     // Pad ID w/ zeros for img 
     const paddedID = (pokemon.id+"").padStart(3,"0");
-
+    console.log("pokecard included")
     // Build Pokemon Card
      const buildPokecard = (pokemon, paddedId) => {
       
       // Build JSX Structure 
-      const pCard = <div className="Pokecard">
+      const pCard = <div className={"Pokecard Pokecard-"+pokemon.type}>
         <div className="Pokecard-name">
           {pokemon.name}
         </div>
