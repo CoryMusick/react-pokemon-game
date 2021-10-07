@@ -4,33 +4,23 @@ import "./Pokecard.css";
 class Pokecard extends Component {
   render(){
     const pokemon = this.props.pokemon;
-    // Pad ID w/ zeros for img 
     const paddedID = (pokemon.id+"").padStart(3,"0");
-    console.log("pokecard included")
-    // Build Pokemon Card
-     const buildPokecard = (pokemon, paddedId) => {
-      
-      // Build JSX Structure 
-      const pCard = <div className={"Pokecard Pokecard-"+pokemon.type}>
-        <div className="Pokecard-name">
-          {pokemon.name}
-        </div>
-        <img src={"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/"+paddedId+".png"} alt={pokemon.name}/>
-        <div>
-          Experience: {pokemon.base_experience}
-        </div>
-        <div>
-        Type: {pokemon.type}
-        </div>
+    
+    const pCard = <div className={"Pokecard Pokecard-"+pokemon.type}>
+      <div className="Pokecard-name">
+        {pokemon.name}
       </div>
-      return pCard;
-    }
-
-    // Build and return card
-    const pCard = buildPokecard(pokemon, paddedID);
+      <img src={"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/"+paddedID+".png"} alt={pokemon.name}/>
+      <div>
+        Experience: {pokemon.base_experience}
+      </div>
+      <div>
+      Type: {pokemon.type}
+      </div>
+    </div>
+  
     return pCard;
   };
 }
-
 
 export default Pokecard;
