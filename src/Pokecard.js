@@ -9,14 +9,14 @@ class Pokecard extends Component {
     
     return (
       <div className={"Pokecard Pokecard-"+pokemon.type}>
-        <div className="Pokecard-name">
+        <h4 className="Pokecard-name">
           {pokemon.name}
-        </div>
-        <img src={"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/"+paddedID+".png"} alt={pokemon.name}/>
+        </h4>
+        <img className="Pokecard-img" src={"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/"+paddedID+".png"} alt={pokemon.name}/>
         <div>
           Experience: {pokemon.base_experience}
         </div>
-        <div>
+        <div className='capitalize'>
         Type: {pokemon.type}
         </div>
       </div>

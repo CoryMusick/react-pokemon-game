@@ -30,12 +30,11 @@ class Pokegame extends Component {
     return (
       <div>
         <div>
-          <h2>Player 1 - Team EXP: {player1EXP.toString()} </h2>
-          <Pokedex playerHand={player1Hand} isWinner={player1EXP > player2EXP} />
+          <Pokedex exp={player1EXP.toString()} playerID={1} playerHand={player1Hand} isWinner={player1EXP > player2EXP} />
+
         </div>
         <div>
-          <h2>Player 2 - Team EXP: {player2EXP.toString()} </h2>
-          <Pokedex playerHand={player2Hand} isWinner={player2EXP > player1EXP}/>
+          <Pokedex exp={player2EXP.toString()} playerID={2} playerHand={player2Hand} isWinner={player2EXP > player1EXP}/>
         </div>
       </div> 
     )

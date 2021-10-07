@@ -1,7 +1,8 @@
 .Pokecard {
-  width: 215px;
-  height: 300px;
+  width: 200px;
+  height: 250%;
   background-color: lightslategray;
+  border: black 2px solid;
 }
 
 .Pokecard-electric{
@@ -26,4 +27,13 @@
 
 .Pokecard-poison{
   background-color: blueviolet;
+}
+
+.Pokecard-img{
+  width: 80%;
+  height: auto;
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
