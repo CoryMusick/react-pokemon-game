@@ -7,16 +7,18 @@ class Pokedex extends Component {
     const props = this.props;
     const cards = props.playerHand.map((pInfo, index) => {
       return <Pokecard key={index} pokemon={pInfo} />
-    }) 
+    })
     
-    return <div className="Pokedex">
+    const pokedex = <div className="Pokedex">
       <div className="Pokedex-cardbox">
-       {cards} 
+        {cards} 
       </div>
       <div className="Pokedex-winbox">
         {props.isWinner ? "Winning Hand" : null}
       </div>
     </div>
+    
+    return pokedex
   }
 }
 
