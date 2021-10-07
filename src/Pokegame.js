@@ -3,7 +3,7 @@ import Pokedex from "./Pokedex";
 
 class Pokegame extends Component {
   render(){
-    const props = this.props;
+    const pokemon = this.props.pokemon;
     // Build hand by pushing 5 random pokemon in to hand array
     const buildHand = (pokemon) => {
       const hand = [];
@@ -22,8 +22,8 @@ class Pokegame extends Component {
       })
       return total;
     }
-    const player1Hand = buildHand(props.pokemon);
-    const player2Hand = buildHand(props.pokemon);
+    const player1Hand = buildHand(pokemon);
+    const player2Hand = buildHand(pokemon);
     const player1EXP = getTotalExp(player1Hand);
     const player2EXP = getTotalExp(player2Hand);
 
@@ -37,9 +37,9 @@ class Pokegame extends Component {
           <h2>Player 2 - Team EXP: {player2EXP.toString()} </h2>
           <Pokedex playerHand={player2Hand} isWinner={player2EXP > player1EXP}/>
         </div>
-      
-    </div> 
-    )}
+      </div> 
+    )
+  }
 }
 Pokegame.defaultProps = {
   pokemon: [
